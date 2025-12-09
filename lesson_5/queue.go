@@ -1,6 +1,6 @@
 package main
 
-type Status = int
+type Status int
 
 const (
 	REMOVE_NIL = iota //
