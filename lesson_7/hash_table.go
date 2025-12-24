@@ -48,8 +48,8 @@ const defaultSize = 100
 const invalidIndex = -1
 const allocateCoeff = 2
 
-func New() HashTable {
-	ht := HashTable{
+func New() *HashTable {
+	ht := &HashTable{
 		cap:            initCap,
 		size:           defaultSize,
 		step:           stepsForSeekedSlot,
