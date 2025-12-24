@@ -117,7 +117,7 @@ func (nd *NativeDictionary) SeekSlot(key string) int {
 	if nd.cap < nd.size {
 
 		resultIndx, indx := hash, hash
-		for nd.fillSlots[resultIndx] {
+		for nd.slots[resultIndx] == key && nd.fillSlots[resultIndx] {
 			indx += nd.step
 			resultIndx = indx % nd.size
 		}
